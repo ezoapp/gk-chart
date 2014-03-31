@@ -1,0 +1,21 @@
+{
+  "name": "gk-chart",
+  "authors": [
+    "EZoUI <ezoservice@icsc.com.tw>"
+  ],
+  "main": ["linechart.html"],
+  "keywords": [
+    "gk",
+    "web-components",
+    "chart"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.ezoui.com/",
+  "dependencies": {
+    "eve-adobe": "master",
+    "g.raphael": "master"
+  },
+  "devDependencies": {
+    "gk-loader": "master"
+  }
+}

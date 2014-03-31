@@ -1,0 +1,65 @@
+<script src="../g.raphael/min/g.line-min.js"></script>
+<script>
+requirejs.config({
+  context: 'gk',
+  shim: {
+    "components/g.raphael/min/g.line-min": ["components/g.raphael/min/g.raphael-min"],
+    "components/g.raphael/min/g.raphael-min": ["components/g.raphael/raphael-min"]
+  }
+});
+</script>
+
+<element name="linechart">
+
+  <template>
+    <div id='{{id}}' width='{{width}}' height='{{height}}' cx='{{cx}}' cy='{{cy}}'></div>
+    <content></content>
+  </template>
+
+  <script>
+  registerElement('linechart', {
+
+    cx: 0,
+
+    cy: 0,
+
+    width: '240px',
+
+    height: '240px',
+
+    raphael: '',
+
+    init: function() {
+      if (this.$ele.attr('cx') != '{{cx}}') {
+        this.cx = parseInt(this.$ele.attr('cx'));
+      }
+      if (this.$ele.attr('cy') != '{{cy}}') {
+        this.cy = parseInt(this.$ele.attr('cy'));
+      }
+
+      if (this.$ele.attr('width') == '{{width}}') {
+        this.$ele.attr('width', this.width);
+      } else {
+        this.width = this.$ele.attr('width');
+      }
+      this.$ele.css('width', this.width);
+
+      if (this.$ele.attr('height') == '{{height}}') {
+        this.$ele.attr('height', this.height);
+      } else {
+        this.height = this.$ele.attr('height');
+      }
+      this.$ele.css('height', this.height);
+      this.raphael = Raphael(this.id, "100%", "100%");
+    },
+
+    render: function(x, y, opts) {
+      var w = this.$ele.width() - 50;
+      var h = this.$ele.height() - 100;
+      return this.raphael.linechart(this.cx, this.cy, w, h, x, y, opts);
+    }
+
+  });
+  </script>
+
+</element>
