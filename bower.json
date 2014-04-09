@@ -13,7 +13,8 @@
   "homepage": "http://www.ezoui.com/",
   "dependencies": {
     "eve-adobe": "master",
-    "g.raphael": "master"
+    "g.raphael": "master",
+    "raphael":"master"
   },
   "devDependencies": {
     "gk-loader": "master"
