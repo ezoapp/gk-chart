@@ -3,10 +3,15 @@
 requirejs.config({
   context: 'gk',
   shim: {
-    "components/g.raphael/min/g.line-min": ["components/g.raphael/min/g.raphael-min"],
-    "components/g.raphael/min/g.raphael-min": ["components/g.raphael/raphael-min"]
+    "components/g.raphael/min/g.line-min": {
+      deps: ["components/g.raphael/min/g.raphael-min"]
+    },
+    "components/g.raphael/min/g.raphael-min": {
+      deps: ["components/raphael/raphael-min"]
+    }
   }
 });
+
 </script>
 
 <element name="linechart">

@@ -12,7 +12,6 @@
   "license": "MIT",
   "homepage": "http://www.ezoui.com/",
   "dependencies": {
-    "eve-adobe": "master",
     "g.raphael": "master",
     "raphael":"master"
   },
