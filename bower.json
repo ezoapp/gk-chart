@@ -13,9 +13,7 @@
   "homepage": "http://www.ezoui.com/",
   "dependencies": {
     "g.raphael": "master",
-    "raphael":"master"
-  },
-  "devDependencies": {
+    "raphael": "master",
     "gk-loader": "master"
   }
 }

@@ -1,17 +1,18 @@
-<script src="../g.raphael/min/g.line-min.js"></script>
+<script path="g.line"></script>
 <script>
+var base = module.name + '/../..';
 requirejs.config({
   context: 'gk',
+  paths: {
+    'g.line': base + '/g.raphael/min/g.line-min',
+    'g.raphael': base + '/g.raphael/min/g.raphael-min',
+    'raphael': base + '/raphael/raphael-min'
+  },
   shim: {
-    "components/g.raphael/min/g.line-min": {
-      deps: ["components/g.raphael/min/g.raphael-min"]
-    },
-    "components/g.raphael/min/g.raphael-min": {
-      deps: ["components/raphael/raphael-min"]
-    }
+    'g.line': ['g.raphael'],
+    'g.raphael': ['raphael']
   }
 });
-
 </script>
 
 <element name="linechart">
