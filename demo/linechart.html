@@ -7,11 +7,12 @@
   <script src='../../jquery/jquery.min.js'></script>
   <script src='../../requirejs/require.js'></script>
   <script src='../../jquery.gk/jquery.gk.min.js'></script>
-  <script baseUrl='../' components='linechart.html' src='../../gk-loader/gk-loader.js'></script>
+  <script baseUrl='../' components='linechart' src='../../gk-loader/gk-loader.js'></script>
 </head>
 
-<body>
-  <div is="linechart" id="gk-49KvfN" height="300" width="280" cx="50" cy="50"></div>
+<body gk-app>
+
+  <linechart id="gk-49KvfN" height="300" width="280" cx="50" cy="50"></linechart>
 
   <script>
   $(document).one("gkComponentsReady", function aa() {
@@ -32,6 +33,7 @@
     });
   });
   </script>
+
 </body>
 
 </html>

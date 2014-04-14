@@ -1,19 +1,6 @@
-<script path="g.line"></script>
-<script>
-var base = module.name + '/../..';
-requirejs.config({
-  context: 'gk',
-  paths: {
-    'g.line': base + '/g.raphael/min/g.line-min',
-    'g.raphael': base + '/g.raphael/min/g.raphael-min',
-    'raphael': base + '/raphael/raphael-min'
-  },
-  shim: {
-    'g.line': ['g.raphael'],
-    'g.raphael': ['raphael']
-  }
-});
-</script>
+<script src="../raphael/raphael-min.js"></script>
+<script src="../g.raphael/min/g.raphael-min.js"></script>
+<script src="../g.raphael/min/g.line-min.js"></script>
 
 <element name="linechart">
 
